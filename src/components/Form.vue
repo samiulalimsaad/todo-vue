@@ -48,9 +48,8 @@ const add = () => {
         title: title.value,
         descripton: descripton.value,
     };
-    let previousTodo = JSON.parse(localStorage.getItem("todo-vue")) || [];
+    const previousTodo = JSON.parse(localStorage.getItem("todo-vue")) || [];
 
-    if (!previousTodo?.length) previousTodo = [];
     previousTodo.push(todo);
 
     localStorage.setItem("todo-vue", JSON.stringify(previousTodo));
